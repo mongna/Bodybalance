@@ -78,6 +78,53 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+      .like-content {
+    display: inline-block;
+    width: 100%;
+    margin: 40px 0 0;
+    padding: 40px 0 0;
+    font-size: 18px;
+    border-top: 10px dashed #eee;
+    text-align: center;
+      }
+     .like-content span {
+    color: #9d9da4;
+    font-family: monospace;
+      }
+     .like-content .btn-secondary {
+    display: block;
+    margin: 40px auto 0px;
+    text-align: center;
+    background: #ed2553;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+    padding: 10px 17px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+     }
+     .like-content .btn-secondary:hover {
+    transform: translateY(-3px);
+     }
+     .like-content .btn-secondary .fa {
+      margin-right: 5px;
+     }
+     .animate-like {
+    animation-name: likeAnimation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.65s;
+     }
+     @keyframes likeAnimation {
+     0%   { transform: scale(30); }
+     100% { transform: scale(1); }
+     }
+
     </style>
 
 
@@ -85,66 +132,67 @@
     <link href="starter-template.css" rel="stylesheet">
   </head>
   <body>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <header class="site-header sticky-top py-1">
+        <nav class="container d-flex flex-column flex-md-row justify-content-between">
+          <a class="py-2" href="#" aria-label="Product">
+            <svg xmlns="https://mongna.github.io/Bodybalance/test2.html" 
+                 width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                 class="d-block mx-auto" role="img" viewBox="0 0 24 24">
+              <title>Product</title>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+          </a>
+          <a class="py-2 d-none d-md-inline-block" href="#">report</a>
+          <a class="py-2 d-none d-md-inline-block" href="#">ranking</a>
+          <a class="py-2 d-none d-md-inline-block" href="#">searching</a>
+        </nav>
+      </header>
 
-<div class="col-lg-8 mx-auto p-3 py-md-5">
-  <header class="site-header sticky-top py-1">
-    <nav class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2" href="#" aria-label="Product">
-        <svg xmlns="https://mongna.github.io/Bodybalance/test2.html" 
-             width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-             class="d-block mx-auto" role="img" viewBox="0 0 24 24">
-          <title>Product</title>
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-      </a>
-      <a class="py-2 d-none d-md-inline-block" href="#">report</a>
-      <a class="py-2 d-none d-md-inline-block" href="https://mongna.github.io/Bodybalance/test2.html">ranking</a>
-      <a class="py-2 d-none d-md-inline-block" href="#">searching</a>
-    </nav>
-  </header>
+      <main>
+        <h1>Get started with body balance</h1>
+        <p class="fs-5 col-md-8">As we get older, we try to prevent body imbalance
+    From now on, you should exercise to balance your body.
+    It's hard to get close to them, but through games,
+    be easily accessiblew.</p>
 
-  <main>
-    <h1>Get started with body balance</h1>
-    <p class="fs-5 col-md-8">As we get older, we try to prevent body imbalance
-From now on, you should exercise to balance your body.
-It's hard to get close to them, but through games,
-be easily accessiblew.</p>
+        <div class="mb-5">
+          <a href="/docs/5.2/examples/" class="btn btn-primary btn-lg px-4">Download examples</a>
+        </div>
 
-    <div class="mb-5">
-      <a href="/docs/5.2/examples/" class="btn btn-primary btn-lg px-4">Download examples</a>
+        <hr class="col-3 col-md-2 mb-5">
+
+        <div class="row g-5">
+          <div class="col-md-6">
+            <h2>Starter projects</h2>
+            <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
+            <ul class="icon-list ps-0">
+              <li class="d-flex align-items-start mb-1"><a href="https://github.com/twbs/bootstrap-npm-starter" rel="noopener" target="_blank">yet</a></li>
+              <li class="text-muted d-flex align-items-start mb-1">yet</li>
+            </ul>
+          </div>
+
+          <div class="like-content">
+
+            <span>
+              Did you like this review? Press like to make it easier for others to see
+            </span>
+
+            <button class="btn-secondary like-review">
+              <i class="fa fa-heart" aria-hidden="true"></i> Like
+            </button>
+
+          </div>
+
+        </div>
+      </main>
+      <footer class="pt-5 my-5 text-muted border-top">
+        Created by the Bootstrap team &middot; &copy; 2022
+      </footer>
     </div>
 
-    <hr class="col-3 col-md-2 mb-5">
 
-    <div class="row g-5">
-      <div class="col-md-6">
-        <h2>Let's avoid bullets</h2>
-        <p>This game avoids bullets from both sides.<br>
-          To avoid bullets, we have to move from side to side on the balance ball.<br>
-          The rules of the game are really simple, but let's challenge how long you can avoid bullets that go faster over time</p>
-        <ul class="icon-list ps-0">
-          <li class="d-flex align-items-start mb-1">
-            <a href="https://github.com/twbs/bootstrap-npm-starter" rel="noopener" target="_blank">yet</a></li>
-          <li class="text-muted d-flex align-items-start mb-1"></li>
-        </ul>
-      </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 
-      <div class="col-md-6">
-        <h2>Guides</h2>
-        <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
-        <ul class="icon-list ps-0">
-          <li class="d-flex align-items-start mb-1"><a href="/docs/5.2/getting-started/introduction/">yet</a></li>
-        </ul>
-      </div>
-    </div>
-  </main>
-  <footer class="pt-5 my-5 text-muted border-top">
-    Created by the Bootstrap team &middot; &copy; 2022
-  </footer>
-</div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-
-  </body>
-</html>
+      </body>
+    </html>
